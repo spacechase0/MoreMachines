@@ -1,0 +1,21 @@
+{
+  "Name": "Qualitizer",
+  "Description": "Improves quality of items, for a price.",
+  "Price": 3000,
+  "Recipe": {
+    "ResultCount": 1,
+    "Ingredients": [
+      {
+        "Object": 338,
+        "Count": 5
+      },
+      {
+        "Object": 768,
+        "Count": 1
+      },
+    ],
+    "CanPurchase": true,
+    "PurchaseFrom": "Dwarf",
+    "PurchasePrice": 3000
+  }
+}

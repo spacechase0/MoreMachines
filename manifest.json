@@ -1,0 +1,15 @@
+{
+  "Name": "Qualitizer",
+  "Author": "spacechase0",
+  "Version": "1.0.1",
+  "Description": "A machine to increase object quality, for a price.",
+  "UniqueID": "spacechase0.Qualitizer",
+  "PerSaveConfigs": false,
+  "EntryDll": "Qualitizer.dll",
+  "UpdateKeys": [ "Nexus:" ],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.JsonAssets"
+    }
+  ]
+}
