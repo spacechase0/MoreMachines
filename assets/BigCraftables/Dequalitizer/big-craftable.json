@@ -1,0 +1,21 @@
+{
+  "Name": "Dequalitizer",
+  "Description": "Lowers the quality of items, with a little bit of return value.",
+  "Price": 3000,
+  "Recipe": {
+    "ResultCount": 1,
+    "Ingredients": [
+      {
+        "Object": 338,
+        "Count": 5
+      },
+      {
+        "Object": 769,
+        "Count": 1
+      },
+    ],
+    "CanPurchase": true,
+    "PurchaseFrom": "Dwarf",
+    "PurchasePrice": 3000
+  }
+}

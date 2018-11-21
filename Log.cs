@@ -1,7 +1,7 @@
 ﻿using StardewModdingAPI;
 using System;
 
-namespace Qualitizer
+namespace MoreMachines
 {
     class Log
     {

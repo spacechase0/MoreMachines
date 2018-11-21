@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Qualitizer.Other
+namespace MoreMachines.Other
 {
     public interface JsonAssetsApi
     {

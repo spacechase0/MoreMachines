@@ -6,11 +6,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Harmony;
-using Qualitizer.Other;
+using MoreMachines.Other;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
-namespace Qualitizer
+namespace MoreMachines
 {
     public class Mod : StardewModdingAPI.Mod
     {
@@ -23,7 +23,7 @@ namespace Qualitizer
 
             GameEvents.FirstUpdateTick += firstTick;
             
-            harmony = HarmonyInstance.Create("spacechase0.Qualitizer");
+            harmony = HarmonyInstance.Create("spacechase0.MoreMachines");
             doPrefix(typeof(StardewValley.Object), "performObjectDropInAction", typeof(ObjectPerformDropInActionHook));
         }
 

@@ -1,15 +1,16 @@
 {
-  "Name": "Qualitizer",
+  "Name": "More Machines",
   "Author": "spacechase0",
-  "Version": "1.0.1",
-  "Description": "A machine to increase object quality, for a price.",
-  "UniqueID": "spacechase0.Qualitizer",
+  "Version": "1.0.0",
+  "Description": "Some more machines.",
+  "UniqueID": "spacechase0.MoreMachines",
   "PerSaveConfigs": false,
-  "EntryDll": "Qualitizer.dll",
-  "UpdateKeys": [ "Nexus:" ],
+  "EntryDll": "MoreMachines.dll",
+  "UpdateKeys": [ "Nexus:", "Chucklefish:" ],
   "Dependencies": [
     {
       "UniqueID": "spacechase0.JsonAssets"
     }
-  ]
+  ],
+  "spacechase0": "more-machines"
 }
