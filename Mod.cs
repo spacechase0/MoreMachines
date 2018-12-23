@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Harmony;
 using MoreMachines.Other;
 using StardewModdingAPI;
@@ -17,11 +13,13 @@ namespace MoreMachines
         public static Mod instance;
         private HarmonyInstance harmony;
 
+        /// <summary>The mod entry point, called after the mod is first loaded.</summary>
+        /// <param name="helper">Provides simplified APIs for writing mods.</param>
         public override void Entry(IModHelper helper)
         {
             instance = this;
 
-            GameEvents.FirstUpdateTick += firstTick;
+            helper.Events.GameLoop.GameLaunched += onGameLaunched;
             
             harmony = HarmonyInstance.Create("spacechase0.MoreMachines");
             doPrefix(typeof(StardewValley.Object), "performObjectDropInAction", typeof(ObjectPerformDropInActionHook));
@@ -44,7 +42,10 @@ namespace MoreMachines
             }
         }
 
-        private void firstTick(object sender, EventArgs args)
+        /// <summary>Raised after the game is launched, right before the first update tick. This happens once per game session (unrelated to loading saves). All mods are loaded and initialised at this point, so this is a good time to set up mod integrations.</summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
+        private void onGameLaunched(object sender, GameLaunchedEventArgs e)
         {
             var ja = Helper.ModRegistry.GetApi<JsonAssetsApi>("spacechase0.JsonAssets");
             if ( ja == null )

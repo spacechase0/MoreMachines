@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreMachines.Other
+﻿namespace MoreMachines.Other
 {
     public interface JsonAssetsApi
     {

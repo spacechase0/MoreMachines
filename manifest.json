@@ -4,13 +4,11 @@
   "Version": "1.0.0",
   "Description": "Some more machines.",
   "UniqueID": "spacechase0.MoreMachines",
-  "PerSaveConfigs": false,
   "EntryDll": "MoreMachines.dll",
+  "MinimumApiVersion": "2.9.0",
   "UpdateKeys": [ /*"Nexus:", "Chucklefish:"*/ ],
   "Dependencies": [
-    {
-      "UniqueID": "spacechase0.JsonAssets"
-    }
+    { "UniqueID": "spacechase0.JsonAssets" }
   ],
   "spacechase0": "more-machines"
 }

@@ -1,21 +1,17 @@
 ﻿using StardewValley;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SObject = StardewValley.Object;
 
 namespace MoreMachines
 {
     public class ObjectPerformDropInActionHook
     {
-        public static bool Prefix( StardewValley.Object __instance, Item dropInItem, bool probe, Farmer who, bool __result )
+        public static bool Prefix( SObject __instance, Item dropInItem, bool probe, Farmer who, bool __result )
         {
             if (__instance.Name == "Qualitizer")
             {
                 __result = false;
 
-                var obj = dropInItem as StardewValley.Object;
+                var obj = dropInItem as SObject;
                 if (__instance.heldObject.Value != null || obj == null || obj.bigCraftable.Value || obj.Quality == 4)
                 {
                     return false;
@@ -24,9 +20,9 @@ namespace MoreMachines
                 if (__instance.bigCraftable.Value && !probe && (obj != null && __instance.heldObject.Value == null))
                     __instance.scale.X = 5f;
 
-                int oldSellPrice = (dropInItem.getOne() as StardewValley.Object).sellToStorePrice();
+                int oldSellPrice = (dropInItem.getOne() as SObject).sellToStorePrice();
 
-                __instance.heldObject.Value = dropInItem.getOne() as StardewValley.Object;
+                __instance.heldObject.Value = dropInItem.getOne() as SObject;
                 ++__instance.heldObject.Value.Quality;
                 if (__instance.heldObject.Value.Quality == 3)
                     ++__instance.heldObject.Value.Quality;
@@ -55,7 +51,7 @@ namespace MoreMachines
             {
                 __result = false;
 
-                var obj = dropInItem as StardewValley.Object;
+                var obj = dropInItem as SObject;
                 if (__instance.heldObject.Value != null || obj == null || obj.bigCraftable.Value || obj.Quality == 0)
                 {
                     return false;
@@ -64,9 +60,9 @@ namespace MoreMachines
                 if (__instance.bigCraftable.Value && !probe && (obj != null && __instance.heldObject.Value == null))
                     __instance.scale.X = 5f;
 
-                int oldSellPrice = (dropInItem.getOne() as StardewValley.Object).sellToStorePrice();
+                int oldSellPrice = (dropInItem.getOne() as SObject).sellToStorePrice();
 
-                __instance.heldObject.Value = dropInItem.getOne() as StardewValley.Object;
+                __instance.heldObject.Value = dropInItem.getOne() as SObject;
                 --__instance.heldObject.Value.Quality;
                 if (__instance.heldObject.Value.Quality == 3)
                     --__instance.heldObject.Value.Quality;
