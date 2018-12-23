@@ -6,7 +6,7 @@
   "UniqueID": "spacechase0.MoreMachines",
   "PerSaveConfigs": false,
   "EntryDll": "MoreMachines.dll",
-  "UpdateKeys": [ "Nexus:", "Chucklefish:" ],
+  "UpdateKeys": [ /*"Nexus:", "Chucklefish:"*/ ],
   "Dependencies": [
     {
       "UniqueID": "spacechase0.JsonAssets"
