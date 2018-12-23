@@ -50,6 +50,7 @@ namespace MoreMachines
             if ( ja == null )
             {
                 Log.error("Failed to get JA API!");
+                return;
             }
 
             ja.LoadAssets(Path.Combine(Helper.DirectoryPath, "assets"));
