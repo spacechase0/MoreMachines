@@ -28,7 +28,7 @@ namespace MoreMachines
                     ++__instance.heldObject.Value.Quality;
 
                 int priceDiff = __instance.heldObject.Value.sellToStorePrice() - oldSellPrice;
-                if (who.money < priceDiff * 2)
+                if (who.Money < priceDiff * 2)
                 {
                     __instance.heldObject.Value = null;
                     return false;
@@ -41,7 +41,7 @@ namespace MoreMachines
                     --obj.Stack;
                     if (obj.Stack <= 0)
                         who.removeItemFromInventory(obj);
-                    who.money -= priceDiff * 2;
+                    who.Money -= priceDiff * 2;
                 }
 
                 __result = true;
@@ -76,7 +76,7 @@ namespace MoreMachines
                     --obj.Stack;
                     if (obj.Stack <= 0)
                         who.removeItemFromInventory(obj);
-                    who.money += priceDiff;
+                    who.Money += priceDiff;
                 }
 
                 __result = true;
